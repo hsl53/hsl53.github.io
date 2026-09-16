@@ -1,1 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayden Lewis | Portfolio</title>
+    <!-- Google Fonts for Feminine & Professional Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #faf7f8;
+            --card-bg: #ffffff;
+            --primary: #9e5b6d;        /* Deep Rose/Mauve */
+            --primary-light: #f4e8eb;  /* Soft Blush Accent */
+            --text-dark: #33272a;
+            --text-muted: #665257;
+            --border-color: #eadbdf;
+            --shadow: 0 10px 30px rgba(158, 91, 109, 0.08);
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Profile & Personal Statement Header */
+        header {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .headshot {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-light);
+            flex-shrink: 0;
+        }
+
+        .header-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .personal-statement {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Section Title Styling */
+        section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-light);
+        }
+
+        /* Skills Pills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-pill {
+            background-color: var(--primary-light);
+            color: var(--primary);
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Projects List */
+        .project-card {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-size: 0.98rem;
+        }
+
+        /* Buttons & Links */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #844958;
+        }
+
+        /* Responsive Layout for Mobile */
+        @media (max-width: 650px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .headshot {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header / Personal Statement -->
+        <header>
+            <img src="HaydenLewis_Headshot.jpeg" alt="Hayden Lewis Headshot" class="headshot">
+            <div class="header-text">
+                <h1>Hayden Lewis</h1>
+                <p class="personal-statement">
+                    I am an undergraduate student majoring in Business Analytics and Information Technology with a minor in Computer Science, passionate about leveraging the intersection of technology and business to solve real-world problems.
+                </p>
+            </div>
+        </header>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <span class="skill-pill">C</span>
+                <span class="skill-pill">Java</span>
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">Visual Studio Code</span>
+                <span class="skill-pill">Microsoft Word</span>
+                <span class="skill-pill">Microsoft PowerPoint</span>
+                <span class="skill-pill">Microsoft Excel</span>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>Java Music Library Application</h3>
+                <p>
+                    Using Java, I built a working music library in which you can add, remove, and load playlists; add and delete songs; and reverse, combine, and shuffle playlists. To see how this works in Java, download the project source files from my repository and run them in Visual Studio Code.
+                </p>
+                <!-- Direct link to repository folder containing files -->
+                <a href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME/tree/main/" target="_blank" class="btn">
+                    View Project Files on GitHub &rarr;
+                </a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>SmartPack Presentation</h3>
+                <p>
+                    In PowerPoint, I showcased my marketing group’s invention: SmartPack, the self-packing suitcase intended to help reduce overpacking and optimize space in your suitcase. Its built-in weight sensor tracks luggage weight in real time and alerts users before they exceed airline weight limits.
+                </p>
+                <a href="https://docs.google.com/presentation/d/1CsN71YWv-6VtGewlsESsAXl88PBrwetn/edit?usp=sharing&ouid=116774791862406518173&rtpof=true&sd=true" target="_blank" class="btn">
+                    View Presentation &rarr;
+                </a>
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>
