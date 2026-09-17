@@ -73,6 +73,13 @@
             font-size: 1.05rem;
             color: var(--text-muted);
             line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
         /* Section Title Styling */
@@ -171,6 +178,16 @@
             background-color: #844958;
         }
 
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-light);
+        }
+
         /* Responsive Layout for Mobile */
         @media (max-width: 650px) {
             header {
@@ -181,6 +198,9 @@
             .headshot {
                 width: 140px;
                 height: 140px;
+            }
+            .contact-links {
+                justify-content: center;
             }
         }
     </style>
@@ -197,6 +217,14 @@
                 <p class="personal-statement">
                     I am an undergraduate student majoring in Business Analytics and Information Technology with a minor in Computer Science, passionate about leveraging the intersection of technology and business to solve real-world problems.
                 </p>
+                <div class="contact-links">
+                    <a href="mailto:hsl53@scarletmail.rutgers.edu" class="btn btn-outline">
+                        Email Me &rarr;
+                    </a>
+                    <a href="https://www.linkedin.com/in/hayden-s-lewis" target="_blank" class="btn btn-outline">
+                        LinkedIn &rarr;
+                    </a>
+                </div>
             </div>
         </header>
 
